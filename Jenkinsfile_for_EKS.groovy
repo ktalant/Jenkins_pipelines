@@ -6,7 +6,7 @@ node {
     stage("Provision EKS with terraform"){
         // sh 'wget https://releases.hashicorp.com/terraform/0.12.20/terraform_0.12.20_linux_amd64.zip'
         // sh 'unzip terraform_0.12.20_linux_amd64.zip && ./terraform version'
-
+        sh 'pwd'
     }
     stage("Set environment for Terraform"){
         sh 'ls -la'
