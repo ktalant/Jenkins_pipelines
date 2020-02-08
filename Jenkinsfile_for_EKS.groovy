@@ -2,8 +2,8 @@ node {
     stage("Pull repo"){
         git 'https://github.com/ktalant/terraform-iaac-eks-burak.git'
     }
-    stage("Stage2"){
-        echo "Hello"
+    stage("Provision EKS with terraform"){
+        echo "terraform version"
     }
     stage("Stage3"){
         echo "Hello"
