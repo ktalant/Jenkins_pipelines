@@ -12,7 +12,7 @@ node {
     }
     stage("Build image"){
         sh "packer version"
-        sh "packer build -var region=${AMI_REGION} tools/${TOOL_TO_PROVISION}.json"
+       // sh "packer build -var region=${AMI_REGION} tools/${TOOL_TO_PROVISION}.json"
     }
     stage("Send notification to Slack"){
         slackSend channel: 'jenkins', message: "${TOOL_TO_PROVISION} has been built in ${AMI_REGION}
