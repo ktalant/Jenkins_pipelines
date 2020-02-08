@@ -10,7 +10,7 @@ node {
     }
     stage("Set environment for Terraform"){
         sh 'ls -la'
-        //sh "source setenv -var-file=configurations/dev/us-west-2/dev.tfvars"
+        sh "source setenv -var-file=configurations/dev/us-west-2/dev.tfvars"
     }
     stage("Stage4"){
         echo "Hello"
