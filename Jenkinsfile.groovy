@@ -9,10 +9,9 @@ node {
         sh "packer build -var region=${AMI_REGION} tools/jenkins_example.json"
     }
     stage("Send notification to Slack"){
-        slackSend channel: '#jenkins'
-        echo "Hello ${AMI_REGION}"
+        slackSend channel: 'jenkins', message: 'GoldenAmi has been built in ${AMI_REGION}'
     }
     stage("Send email"){
-        echo "Hello"
+        mail bcc: '', body: 'Your ubuntu golden AMI is ready in ${AMI_REGION}', cc: '', from: '', replyTo: '', subject: 'GoldenAMI is ready', to: 'talantasan@outlook.com'
     }
 }
