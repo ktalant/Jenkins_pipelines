@@ -9,7 +9,7 @@ node {
     }
     stage("Send notification to Slack"){
         slackSend channel: '#jenkins'
-        echo "Hello"
+        echo "Hello ${AMI_REGION}"
     }
     stage("Send email"){
         echo "Hello"
