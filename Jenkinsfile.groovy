@@ -1,5 +1,5 @@
 node {
-    properties([parameters([text(defaultValue: 'dummy@gmail.com', description: 'Please provide email(s) for notifications. Use comma for multiple emails.', name: 'EMAIL_TO_SEND'), choice(choices: ['golden_ami', 'nexus', 'gitlab'], description: 'choose tool to provision', name: 'TOOL_TO_PROVISION'), choice(choices: ['us-east-1', 'us-east-2', 'us-west-1', 'us-west-2'], description: 'Choose region', name: 'AMI_REGION')])])
+    
     
     stage("Pull repo"){
         git 'https://github.com/farrukh90/packer.git'
