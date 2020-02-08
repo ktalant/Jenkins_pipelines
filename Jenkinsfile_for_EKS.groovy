@@ -3,7 +3,7 @@ node {
         git 'https://github.com/ktalant/terraform-iaac-eks-burak.git'
     }
     stage("Provision EKS with terraform"){
-        echo "terraform version"
+        sh 'terraform version'
     }
     stage("Stage3"){
         echo "Hello"
