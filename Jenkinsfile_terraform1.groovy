@@ -2,9 +2,9 @@ pipeline {
   agent any
 
   parameters {
-                choice(name: 'AWS_REGION', choices: ['us-east-1', 'us-east-2', 'us-west-1'], description: ''),
-                string(name: 'AWS_ACCESS_KEY_ID', description: 'Paste here AWS access key id'),
-                string(name: 'AWS_SECRET_ACCESS_KEY', description: 'Paste here AWS secret access key id'),
+                choice(name: 'AWS_REGION', choices: ['us-east-1', 'us-east-2', 'us-west-1'], description: '')
+                string(name: 'AWS_ACCESS_KEY_ID', description: 'Paste here AWS access key id')
+                string(name: 'AWS_SECRET_ACCESS_KEY', description: 'Paste here AWS secret access key id')
                 string(name: 'AWS_PROFILE', description: 'Enter you profile')
             }
   stages {
