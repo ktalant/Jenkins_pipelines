@@ -11,10 +11,10 @@ pipeline {
 
     stage ('Configure AWS Credentials') {
       steps {
-        echo 'Set up aws credentials to ${AWS_REGION}'
-        echo 'Here is your ${AWS_ACCESS_KEY_ID}'
-        echo 'Here is your ${AWS_SECRET_ACCESS_KEY}'
-        echo 'Here is your --${AWS_PROFILE}'
+        echo "Set up aws credentials to ${AWS_REGION}"
+        echo "Here is your ${AWS_ACCESS_KEY_ID}"
+        echo "Here is your ${AWS_SECRET_ACCESS_KEY}"
+        echo "Here is your --${AWS_PROFILE}"
         sh '''
         ls -a
         '''
