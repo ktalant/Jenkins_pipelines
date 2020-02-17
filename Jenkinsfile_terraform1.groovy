@@ -7,7 +7,7 @@ pipeline {
                 }
             }
       steps {
-        echo 'Set up aws credentials to ${AWS_REGION}'
+        echo "Set up aws credentials to ${AWS_REGION}"
         sh '''
         ls -a
         '''
