@@ -1,5 +1,5 @@
 pipeline {
-  options([
+  properties([
     buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '4')),
     parameters([
       string(defaultValue: '', description: 'Enter aws profile', name: 'AWS_PROFILE', trim: false),
